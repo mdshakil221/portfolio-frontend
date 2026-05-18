@@ -9,7 +9,7 @@ const About = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           className="w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-400 flex-shrink-0"
         >
           <img src={shakilPicture} alt="MD Shakil" className="w-full h-full object-cover" />
