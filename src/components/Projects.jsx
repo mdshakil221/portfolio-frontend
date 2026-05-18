@@ -14,8 +14,6 @@ const Projects = () => {
       .then(res => {
         setProjects(res.data);
         setFiltered(res.data);
-
-        // সব unique tech collect করো
         const allTech = ['All', ...new Set(res.data.flatMap(p => p.tech))];
         setFilters(allTech);
         setLoading(false);
@@ -76,25 +74,56 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: false }}
-                className="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-400/20 transition"
+                whileHover={{ y: -8 }}
+                className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300 group"
               >
-                {project.image && (
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-                )}
+                {/* Image */}
+                <div className="relative overflow-hidden h-48">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+                      <span className="text-5xl">💻</span>
+                    </div>
+                  )}
+                  {project.featured && (
+                    <span className="absolute top-3 right-3 bg-cyan-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
+                      Featured
+                    </span>
+                  )}
+                </div>
+
+                {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">{project.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">{project.description}</p>
+
+                  {/* Tech Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((t) => (
-                      <span key={t} className="bg-gray-700 text-cyan-400 text-xs px-3 py-1 rounded-full">{t}</span>
+                      <span key={t} className="bg-gray-800 border border-gray-600 text-cyan-400 text-xs px-3 py-1 rounded-full">
+                        {t}
+                      </span>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+
+                  {/* Links */}
+                  <div className="flex gap-4 pt-2 border-t border-gray-700">
                     {project.githubUrl && (
-                      <a href={project.githubUrl} target="_blank" rel="noreferrer" className="text-sm text-cyan-400 hover:underline">GitHub</a>
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer"
+                        className="flex items-center gap-1 text-sm text-gray-400 hover:text-cyan-400 transition">
+                        <span>⭐</span> GitHub
+                      </a>
                     )}
                     {project.liveUrl && (
-                      <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-sm text-green-400 hover:underline">Live Demo</a>
+                      <a href={project.liveUrl} target="_blank" rel="noreferrer"
+                        className="flex items-center gap-1 text-sm text-gray-400 hover:text-green-400 transition">
+                        <span>🚀</span> Live Demo
+                      </a>
                     )}
                   </div>
                 </div>
