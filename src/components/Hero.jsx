@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
@@ -20,14 +21,31 @@ const Hero = () => {
         >
           MD Shakil
         </motion.h1>
-        <motion.h2
+
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-2xl text-gray-400 mb-6"
         >
-          MERN Stack Developer
-        </motion.h2>
+          <TypeAnimation
+            sequence={[
+              'MERN Stack Developer',
+              2000,
+              'React Developer',
+              2000,
+              'Node.js Developer',
+              2000,
+              'Full Stack Developer',
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            className="text-cyan-400 font-semibold"
+          />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
