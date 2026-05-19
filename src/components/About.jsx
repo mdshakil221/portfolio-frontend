@@ -10,7 +10,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
-          className="w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-400 flex-shrink-0"
+          className="w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-400 shrink-0"
         >
           <img src={shakilPicture} alt="MD Shakil" className="w-full h-full object-cover" />
         </motion.div>

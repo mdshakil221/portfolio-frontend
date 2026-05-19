@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex justify-center gap-6 mb-6">
           <a href="https://github.com/mdshakil221" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-cyan-400 transition">GitHub</a>
           <a href="https://www.linkedin.com/in/md-shakil-ahammod/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-cyan-400 transition">LinkedIn</a>
-          <a href="mdshakil6539@gmail.com" className="text-gray-400 hover:text-cyan-400 transition">Email</a>
+          <a href="mailto:mdshakil6539@gmail.com" className="text-gray-400 hover:text-cyan-400 transition">Email</a>
         </div>
         <p className="text-gray-500 text-xs">© 2025 MD Shakil. All rights reserved.</p>
       </div>

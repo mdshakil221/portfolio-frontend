@@ -1,15 +1,15 @@
 const educations = [
   {
     degree: 'BSc in Computer Science',
-    institution: 'Your University Name',
-    duration: '2020 - 2024',
+    institution: 'CIty University',
+    duration: '2023 - 2026',
     description: 'Studied software engineering, data structures, algorithms and web development.',
   },
   {
     degree: 'HSC',
-    institution: 'Your College Name',
+    institution: 'Monohardi College',
     duration: '2018 - 2020',
-    description: 'Science group with GPA 5.00.',
+    description: 'Science group with GPA 4.25.',
   },
 ];
 
