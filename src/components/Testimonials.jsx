@@ -1,19 +1,19 @@
 const testimonials = [
   {
-    name: 'John Doe',
-    role: 'CEO, Company Name',
+    name: 'Rabbil Hasan',
+    role: 'instructor, Ostad',
     message: 'Shakil is an excellent developer. He delivered our project on time with great quality.',
     avatar: 'https://via.placeholder.com/60',
   },
   {
-    name: 'Jane Smith',
-    role: 'Project Manager, Company Name',
+    name: 'Summit Shah',
+    role: 'CEO, Ostad',
     message: 'Working with Shakil was a great experience. Very professional and skilled developer.',
     avatar: 'https://via.placeholder.com/60',
   },
   {
-    name: 'Robert Johnson',
-    role: 'CTO, Startup Name',
+    name: 'Saddat Hasan',
+    role: 'CTO, Startup Ostad',
     message: 'Shakil built our entire web application from scratch. Highly recommended!',
     avatar: 'https://via.placeholder.com/60',
   },
