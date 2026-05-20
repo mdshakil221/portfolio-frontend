@@ -1,13 +1,13 @@
 const experiences = [
   {
     title: 'Junior MERN Stack Developer',
-    company: 'Company Name',
+    company: 'Ostad',
     duration: '2024 - Present',
     description: 'Developed full-stack web applications using React, Node.js, Express and MongoDB.',
   },
   {
     title: 'Frontend Developer Intern',
-    company: 'Company Name',
+    company: 'Ostad',
     duration: '2023 - 2024',
     description: 'Built responsive UI components using React and Tailwind CSS.',
   },
